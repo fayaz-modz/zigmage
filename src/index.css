@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+    --spacing-it: env(safe-area-inset-top);
+    --spacing-ib: env(safe-area-inset-bottom);
+    --spacing-il: env(safe-area-inset-left);
+    --spacing-ir: env(safe-area-inset-right);
+}
+
+body {
+    overscroll-behavior: none;
+}
+
+canvas {
+    touch-action: none;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    background-color: #09090b;
+    color: white;
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.animate-slide-up {
+    animation: slideUpFade 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

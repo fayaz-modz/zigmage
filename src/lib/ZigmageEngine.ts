@@ -282,7 +282,7 @@ export class ZigmageEngine {
 				}
 			};
 
-			const response = await fetch('/zigmage.wasm');
+			const response = await fetch('/zigmage/zigmage.wasm');
 			const { instance } = await WebAssembly.instantiateStreaming(response, { env });
 
 			this.memory = instance.exports.memory as WebAssembly.Memory;

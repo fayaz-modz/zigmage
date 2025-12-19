@@ -23,7 +23,7 @@ FROM nginx:alpine AS production
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy built static files from builder stage
-COPY --from=builder /app/dist/ /usr/share/nginx/html/
+COPY --from=builder /app/dist/ /usr/share/nginx/html/zigmage/
 
 # Copy nginx configuration for SPA
 COPY nginx.conf /etc/nginx/conf.d/default.conf

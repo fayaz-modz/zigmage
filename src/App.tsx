@@ -3,14 +3,14 @@ import { Editor } from './Editor';
 import { LandingPage } from './LandingPage';
 
 function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/editor" element={<Editor />} />
-      </Routes>
-    </Router>
-  );
+    return (
+        <Router basename='/zigmage'>
+            <Routes>
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/editor" element={<Editor />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
